@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="coffeeshopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="menu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="menu1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="harga" Type="Int32" Nullable="false" />
+    <Property Name="deskripsi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="stok" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="orderdetails" Relationship="Self.FK_orderdetail_menu" FromRole="menu" ToRole="orderdetail" />
+  </EntityType>
+  <EntityType Name="orderdetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="jumlah" Type="Int32" Nullable="false" />
+    <Property Name="subtotal" Type="Int32" Nullable="false" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="menu_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="menu" Relationship="Self.FK_orderdetail_menu" FromRole="orderdetail" ToRole="menu" />
+    <NavigationProperty Name="pemesanan" Relationship="Self.FK_orderdetail_orderdetail" FromRole="orderdetail" ToRole="pemesanan" />
+  </EntityType>
+  <EntityType Name="pemesanan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="total_price" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="orderdetails" Relationship="Self.FK_orderdetail_orderdetail" FromRole="pemesanan" ToRole="orderdetail" />
+    <NavigationProperty Name="user" Relationship="Self.FK_pemesanan_user1" FromRole="pemesanan" ToRole="user" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="role" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="pemesanans" Relationship="Self.FK_pemesanan_user1" FromRole="user" ToRole="pemesanan" />
+  </EntityType>
+  <Association Name="FK_orderdetail_menu">
+    <End Role="menu" Type="Self.menu" Multiplicity="1" />
+    <End Role="orderdetail" Type="Self.orderdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="menu">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orderdetail">
+        <PropertyRef Name="menu_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orderdetail_orderdetail">
+    <End Role="pemesanan" Type="Self.pemesanan" Multiplicity="1" />
+    <End Role="orderdetail" Type="Self.orderdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pemesanan">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orderdetail">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pemesanan_user1">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="pemesanan" Type="Self.pemesanan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pemesanan">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="coffeeshopEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="menus" EntityType="Self.menu" />
+    <EntitySet Name="orderdetails" EntityType="Self.orderdetail" />
+    <EntitySet Name="pemesanans" EntityType="Self.pemesanan" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="FK_orderdetail_menu" Association="Self.FK_orderdetail_menu">
+      <End Role="menu" EntitySet="menus" />
+      <End Role="orderdetail" EntitySet="orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orderdetail_orderdetail" Association="Self.FK_orderdetail_orderdetail">
+      <End Role="pemesanan" EntitySet="pemesanans" />
+      <End Role="orderdetail" EntitySet="orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pemesanan_user1" Association="Self.FK_pemesanan_user1">
+      <End Role="user" EntitySet="users" />
+      <End Role="pemesanan" EntitySet="pemesanans" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

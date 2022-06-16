@@ -1,0 +1,58 @@
+﻿@model ConnectSQLServer.Models.orderdetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>orderdetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jumlah)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jumlah)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subtotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subtotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.menu.menu1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.menu.menu1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pemesanan.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pemesanan.status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

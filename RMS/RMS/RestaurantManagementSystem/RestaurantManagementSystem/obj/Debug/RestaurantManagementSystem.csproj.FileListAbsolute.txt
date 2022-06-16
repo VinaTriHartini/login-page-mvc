@@ -1,0 +1,12 @@
+c:\users\samukelo\documents\visual studio 2010\Projects\RestaurantManagementSystem\RestaurantManagementSystem\bin\RestaurantManagementSystem.dll
+c:\users\samukelo\documents\visual studio 2010\Projects\RestaurantManagementSystem\RestaurantManagementSystem\bin\RestaurantManagementSystem.pdb
+c:\users\samukelo\documents\visual studio 2010\Projects\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.dll
+c:\users\samukelo\documents\visual studio 2010\Projects\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
+C:\Users\Samukelo\Documents\Visual Studio 2010\Projects\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csprojResolveAssemblyReference.cache
+D:\MAKERS\ASP.NET MVC\RMS\RMS\RestaurantManagementSystem\RestaurantManagementSystem\bin\RestaurantManagementSystem.dll.config
+D:\MAKERS\ASP.NET MVC\RMS\RMS\RestaurantManagementSystem\RestaurantManagementSystem\bin\RestaurantManagementSystem.dll
+D:\MAKERS\ASP.NET MVC\RMS\RMS\RestaurantManagementSystem\RestaurantManagementSystem\bin\RestaurantManagementSystem.pdb
+D:\MAKERS\ASP.NET MVC\RMS\RMS\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.AssemblyReference.cache
+D:\MAKERS\ASP.NET MVC\RMS\RMS\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.CoreCompileInputs.cache
+D:\MAKERS\ASP.NET MVC\RMS\RMS\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.dll
+D:\MAKERS\ASP.NET MVC\RMS\RMS\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb

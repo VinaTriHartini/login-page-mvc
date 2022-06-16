@@ -1,0 +1,12 @@
+c:\users\samukelo\documents\visual studio 2010\Projects\RestaurantManagementSystem\RestaurantManagementSystem\bin\RestaurantManagementSystem.dll
+c:\users\samukelo\documents\visual studio 2010\Projects\RestaurantManagementSystem\RestaurantManagementSystem\bin\RestaurantManagementSystem.pdb
+c:\users\samukelo\documents\visual studio 2010\Projects\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.dll
+c:\users\samukelo\documents\visual studio 2010\Projects\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
+C:\Users\Samukelo\Documents\Visual Studio 2010\Projects\RestaurantManagementSystem_cookies\RestaurantManagementSystem\bin\RestaurantManagementSystem.dll
+C:\Users\Samukelo\Documents\Visual Studio 2010\Projects\RestaurantManagementSystem_cookies\RestaurantManagementSystem\bin\RestaurantManagementSystem.pdb
+C:\Users\Samukelo\Documents\Visual Studio 2010\Projects\RestaurantManagementSystem_cookies\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.dll
+C:\Users\Samukelo\Documents\Visual Studio 2010\Projects\RestaurantManagementSystem_cookies\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
+C:\Users\Samukelo\Documents\RS_backup_files\RestaurantManagementSystem_cookies\RestaurantManagementSystem\bin\RestaurantManagementSystem.dll
+C:\Users\Samukelo\Documents\RS_backup_files\RestaurantManagementSystem_cookies\RestaurantManagementSystem\bin\RestaurantManagementSystem.pdb
+C:\Users\Samukelo\Documents\RS_backup_files\RestaurantManagementSystem_cookies\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.dll
+C:\Users\Samukelo\Documents\RS_backup_files\RestaurantManagementSystem_cookies\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb

@@ -1,0 +1,31 @@
+﻿.topnav
+{
+    overflow: hidden;
+    background-color: #bf4080;
+    height: 60px;
+    }
+    
+.topnav a
+{
+    float: left;
+    display: block;
+    color: #4dffb8;
+    text-align: center;
+    padding: 14px 16px;
+    padding-left: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 10px;
+    }
+    
+.topnav a:hover
+{
+    background-color: #ddd;
+    color: Black;
+    padding-left: 14px;
+    }
+    
+.topnav .login-container
+{
+    float: right;
+    }
